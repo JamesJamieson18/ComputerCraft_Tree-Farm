@@ -7,3 +7,15 @@ function getFuel()
     end
 end
 
+function placeTree()
+    if turtle.detect() == false then
+        turtle.select(16)
+        turtle.place()
+        turtle.suckDown(1)
+    end
+end
+
+local loop = true
+while loop do
+    placeTree()
+end
